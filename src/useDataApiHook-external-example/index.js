@@ -9,6 +9,8 @@ function App() {
     { hits: [] },
   );
 
+  console.log(data)
+
   return (
     <Fragment>
       <form
@@ -37,6 +39,7 @@ function App() {
           {data.hits.map(item => (
             <li key={item.objectID}>
               <a href={item.url}>{item.title}</a>
+              <p>&ensp;by: {item.author}&ensp;Points: {item.points}</p>
             </li>
           ))}
         </ul>
